@@ -41,7 +41,7 @@ public class Converter {
                         .append(statusArrayList.get(i).status).append("|")
                         .append(statusArrayList.get(i).kontakt_ts).append("\n");
             }
-            System.out.print(csv.toString());
+            //System.out.print(csv.toString());
 
             PrintWriter printWriter = new PrintWriter("statuses.csv");
             printWriter.write(csv.toString());
@@ -52,16 +52,3 @@ public class Converter {
         }
     }
 }
-
-
-// Zad. 2 SELECT `kontakt_id`,`klient_id`,`pracownik_id`,`status`, max(`kontakt_ts`) FROM `statuses` GROUP BY klient_id
-
-// Zad. 3
-
-//    INSERT INTO `f_docieralnosc`(`data`, `sukcesy`, `utraty`, `do_ponowienia`)
-//        SELECT dzien,
-//        COUNT(CASE status WHEN "zainteresowany" THEN 1 ELSE null END),
-//        COUNT(CASE status WHEN "niezainteresowany" THEN 1 ELSE null END),
-//        COUNT(CASE status WHEN "poczta_glosowa" THEN 1 WHEN "nie_ma_w_domu" THEN 1 ELSE null END)
-//        FROM statuses
-//        GROUP BY dzien;
