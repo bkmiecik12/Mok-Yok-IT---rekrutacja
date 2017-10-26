@@ -1,0 +1,1 @@
+SELECT `kontakt_id`,`klient_id`,`pracownik_id`,`status`, max(`kontakt_ts`) FROM `statuses` GROUP BY klient_id
